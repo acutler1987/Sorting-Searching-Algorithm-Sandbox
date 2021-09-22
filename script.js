@@ -53,8 +53,7 @@ const biSearch = function (arr, key) {
   while (startIndex <= endIndex) {
     let middleIndex = Math.floor((startIndex + endIndex) / 2);
     if (arr[middleIndex] === key) {
-      console.log(`Found at position ${middleIndex}`);
-      return 0;
+      return console.log(`Found at position ${middleIndex}`);
     } else if (arr[middleIndex] < key) {
       console.log('Searching to the right...');
       startIndex = middleIndex + 1;
@@ -66,32 +65,8 @@ const biSearch = function (arr, key) {
     }
   }
   console.log('Target was not found in this array.');
-  return 1;
 };
 biSearch(sortedArr, 0);
-
-const binarySearch = (array, target) => {
-  let startIndex = 0;
-  let endIndex = array.length - 1;
-  while (startIndex <= endIndex) {
-    let middleIndex = Math.floor((startIndex + endIndex) / 2);
-    if (target === array[middleIndex]) {
-      return console.log('Target was found at index ' + middleIndex);
-    }
-    if (target > array[middleIndex]) {
-      console.log('Searching the right side of Array');
-      startIndex = middleIndex + 1;
-    }
-    if (target < array[middleIndex]) {
-      console.log('Searching the left side of array');
-      endIndex = middleIndex - 1;
-    } else {
-      console.log('Not Found this loop iteration. Looping another iteration.');
-    }
-  }
-
-  console.log('Target value not found in array');
-};
 // binarySearch(sortedArr, 0);
 
 //////////////////// Selection Sort...
